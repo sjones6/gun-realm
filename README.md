@@ -6,7 +6,7 @@ Store [GunJS](https://github.com/amark/gun) graph data in [RealmJS](https://real
 
 ## Motivation
 
-In most apps, you will want to keep local state of your Gunjs data between application sessions and when offline. In the browser, Gun will dump to local storage to provide offline capabilities. This wires up your Gun database to a Realm store for fast and 
+In most apps, you will want to keep local state of your Gunjs data between application sessions and when offline. In the browser, Gun will dump to local storage to provide offline capabilities. This wires up your Gun database to a Realm store for fast local storage in your React Native application.
 
 For an alternative with AsyncStorage, see Andre Staltz's [gun-asyncstorage](https://github.com/staltz/gun-asyncstorage).
 
