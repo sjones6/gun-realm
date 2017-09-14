@@ -2,6 +2,8 @@
 
 Store [GunJS](https://github.com/amark/gun) graph data in [RealmJS](https://realm.io/docs/javascript/latest/#getting-started) for React Native apps.
 
+**WARNING: NOT PRODUCTION READY!**
+
 ## Motivation
 
 In most apps, you will want to keep local state of your Gunjs data between application sessions and when offline. In the browser, Gun will dump to local storage to provide offline capabilities. This wires up your Gun database to a Realm store for fast and 
@@ -21,10 +23,6 @@ registerGunRealm(Gun);
 
 let gun = new Gun();
 ```
-
-### WARNING
-
-NOT production ready. Does not handle boolean values
 
 ## Caution about Expo
 

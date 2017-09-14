@@ -52,9 +52,11 @@ const GunRealm = new KeyValAdapter({
                 let target = batch.length;
                 batch.forEach(node => {
                     node.key_field = node.key + '_' + node.field;
-                    if (Object.keys(node).indexOf("val") >= 0) {
+                    if (node.val !== undefined) {
                         node.valType = this._determineValType(node.val);
+                        console.log(node.val);
                         node.val = (node.valType !== 3) ? node.val.toString() : "";
+                        console.log(node.val);
                     } else {
                         node.valType = -1;
                     }
