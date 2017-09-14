@@ -26,10 +26,10 @@ const GunRealm = new KeyValAdapter({
                             node.val = row.val;
                             break;
                         case 1:
-                            node.val = parseInt(row.valType);
+                            node.val = parseInt(row.val);
                             break;
                         case 2:
-                            node.val = (row.valType === "true");
+                            node.val = (row.val === "true");
                             break;
                         case 3:
                             node.val = null;
@@ -54,9 +54,7 @@ const GunRealm = new KeyValAdapter({
                     node.key_field = node.key + '_' + node.field;
                     if (node.val !== undefined) {
                         node.valType = this._determineValType(node.val);
-                        console.log(node.val);
-                        node.val = (node.valType !== 3) ? node.val.toString() : "";
-                        console.log(node.val);
+                        node.val = (node.valType !== 3) ? "" + node.val : "";
                     } else {
                         node.valType = -1;
                     }
@@ -81,8 +79,10 @@ const GunRealm = new KeyValAdapter({
                 break;
             case (typeof val === 'boolean'):
                 type = 2;
+                break;
             case (val === null):
                 type = 3;
+                break;
         }
         return type;
     }
